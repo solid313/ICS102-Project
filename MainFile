@@ -1,0 +1,34 @@
+import java.util.Scanner;
+import java.io.FileInputStream;
+import java.io.IOException;
+
+
+public class overlappingDriver {
+
+	public static void main (String[] args) throws IOException
+	{
+		FileInputStream fis = new FileInputStream("C:/Users/Adnan/Desktop/file/wire-01.in");
+		Scanner rd = new Scanner(fis);
+		wire wr=new wire();
+		int x1,y1,x2,y2;
+		int m = rd.nextInt();
+		int spx1 = rd.nextInt();
+		int spx2 = rd.nextInt();
+		int spy1 = rd.nextInt();
+		int spy2 = rd.nextInt();
+		for(int j =0;j<m;j++)
+		{
+			for(int i=0;rd.hasNextInt();i++)
+			{
+				x1 = rd.nextInt();
+				y1 = rd.nextInt();
+				x2 = rd.nextInt();
+				y2 = rd.nextInt();
+				wr.wire(x1, y1, x2, y2, j);
+			}
+		}
+		rd.close();
+		fis.close();
+	}
+
+}
