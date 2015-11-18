@@ -1,0 +1,36 @@
+
+public class wire 
+{
+	private int x1;
+	private int x2;
+	private int y1;
+	private int y2;
+	private int m;
+	int w[] = new int[8];
+	public void wire(int x1,int y1,int x2,int y2,int m)
+	{
+		
+		this.x1 = x1;
+		this.x2 = x2;
+		this.y1 = y1;
+		this.y2 = y2;
+		this.m = m;
+		
+		if(x1 == x2)
+		{
+			w[m]=y2-y1;
+			
+		}
+		else if (y2 == y1)
+		{
+			w[m]=x2-x1;
+			
+		}
+		else System.out.println("Wrong values.");
+			
+		System.out.print(w[m]+" ");
+		
+	}
+	
+	
+}
