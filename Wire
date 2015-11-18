@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Wire {
+	Scanner read = new Scanner ("input.txt");
+	String line = read.nextLine();
+	private int chip1X;
+	private int chip1Y;
+	private int chip2X;
+	private int chip2Y;
+	Wire(int chip1X, int chip1Y , int chip2X, int chip2Y){
+		this.chip1X = chip1X;
+		this.chip1Y = chip1Y;
+		this.chip2X = chip2X;
+		this.chip2Y = chip2Y;
+	}
+	// use if statment to use one of these two methods.
+	public int[] wireLengthY(){
+		int[] wireY = new int [Math.abs(this.chip1Y-this.chip2Y)];
+		for(int i = this.chip1Y ; i < this.chip2Y ; i++ ){
+			for (int j = 0 ; j < wireY.length ; j ++){
+				wireY[j]=i;
+			}
+		}
+		return wireY;
+	}
+	public int[] wireLengthX(){
+		int[] wireX = new int [Math.abs(this.chip1X-this.chip2X)];
+		for(int i = this.chip1X ; i < this.chip2X ; i++ ){
+			for (int j = 0 ; j < wireX.length ; j ++){
+				wireX[j]=i;
+			}
+		}
+	return wireX;
+	}
+}
